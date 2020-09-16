@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="login_wrap">
-            <form action="">
+            <form action="" v-on:submit.prevent="goto_main">
                 <div class="div-input">
                     아이디
                     <br />
@@ -36,6 +36,7 @@
                         type="submit"
                         class="login_wrap-input submit"
                         placeholder=""
+                        value="로그인"
                     />
                     <br />
                 </div>
@@ -45,5 +46,15 @@
                 </div>
             </form>
         </div>
+        <script>
+            new Vue({
+                el: ".login_wrap",
+                methods: {
+                    goto_main() {
+                        window.open("/main/main.html", "_self");
+                    },
+                },
+            });
+        </script>
     </body>
 </html>
