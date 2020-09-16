@@ -1,14 +1,17 @@
-div {
-    border: 2px solid black;
-    margin: 10px;
-    padding: 10px;
+body {
+    margin: 0px;
+    padding: 0px;
 }
+
 .header {
-    background-color: blue;
+    height: 150px;
+    border: 1px solid black;
 }
 .body {
-    background-color: aquamarine;
+    border: 1px solid black;
+    height: 750px;
 }
 .footer {
-    background-color: blueviolet;
+    border: 1px solid black;
+    height: 60px;
 }
