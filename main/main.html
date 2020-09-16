@@ -7,26 +7,40 @@
         <link rel="stylesheet" href="./main.css" />
     </head>
     <body>
-        <div class="header">
-            헤더부분입니다.
-            <div class="logo"></div>
-        </div>
-        <div class="body">
-            <div class="section_1">
-                <div class="schedule_wrap">
-                    <div class="today_schedule body_content">오늘의 일정</div>
-                    <div class="school_schedule body_content">
-                        오늘의 우리학교
+        <div>
+            <div class="header">
+                <div class="logo" onclick="reload()">매일리</div>
+            </div>
+            <div class="body">
+                <div class="section_1">
+                    <div class="schedule_wrap">
+                        <div class="today_schedule body_content">
+                            <div class="content_title">오늘의 일정</div>
+                        </div>
+                        <div class="school_schedule body_content">
+                            <div class="content_title">오늘의 우리학교</div>
+                        </div>
+                    </div>
+                    <div class="our_schedule body_content">
+                        <div class="content_title">우리의 일정</div>
                     </div>
                 </div>
-                <div class="our_schedule body_content">우리의 일정</div>
-            </div>
-            <div class="section_2">
-                <div class="info_wrap">
-                    <div class="my_profile body_content">프로필</div>
-                    <div class="meal_info body_content">급식</div>
+                <div class="section_2">
+                    <div class="info_wrap">
+                        <div class="my_profile body_content">
+                            <div class="content_title">프로필</div>
+                        </div>
+                        <div class="meal_info body_content">
+                            <div class="content_title">급식</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            function reload() {
+                location.reload();
+            }
+        </script>
     </body>
 </html>
