@@ -1,7 +1,22 @@
 <template>
-    <div id="app"></div>
+    <div id="app">
+        <LoginForm />
+    </div>
 </template>
 
-<script></script>
+<script>
+import LoginForm from "./components/Login/LoginForm";
+import SignUp from "./components/Login/SignUp";
+export default {
+    components: {
+        LoginForm: LoginForm,
+        SignUp: SignUp,
+    },
+};
+</script>
 
-<style></style>
+<style>
+#app {
+    display: flex;
+}
+</style>
