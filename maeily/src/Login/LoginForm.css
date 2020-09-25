@@ -14,30 +14,32 @@
 }
 .title {
     font-size: 50px;
+    font-weight: bold;
+    color: #b7de4b;
 }
 form {
+    width: 350px;
+    padding: 10px;
     display: flex;
+    flex-direction: column;
 }
 .login_form_wrap {
-    border: 1px solid black;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
 }
 .form_input {
     font-family: "Noto Sans KR", sans-serif;
     margin: 0px;
     padding: 10px;
-    width: 80%;
+    margin-bottom: 20px;
+    width: 94%;
     outline: none;
     border: none;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(82, 81, 81, 1);
-    -moz-box-shadow: 0px 1px 4px 0px rgba(82, 81, 81, 1);
-    box-shadow: 0px 1px 4px 0px rgba(82, 81, 81, 1);
+    border-bottom: 1px solid black;
 }
 .input_submit {
+    width: 100%;
+    border: none;
     cursor: pointer;
-    background-color: black;
-    color: white;
+    background-color: #b7de4b;
+    color: dimgray;
 }
