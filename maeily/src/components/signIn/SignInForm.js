@@ -1,16 +1,57 @@
 import React, { useState } from "react";
 import "./SignInForm.scss";
+
+// CommonJS
+const Swal = require("sweetalert2"); //Swal 라이브러리 가져오기
+const axios = require("axios"); // axios 라이브러리 가져오기
+
 function SignInForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const onChangeEmail = (e) => {
         setEmail(e.target.value);
     };
+
     const onChangePassword = (e) => {
         setPassword(e.target.value);
     };
     const onSubmit = () => {
-        console.log(email, password);
+        const url = "http://10.80.161.119:8000/api/auth/login";
+        axios({
+            method: "post",
+            url: url,
+            data: {
+                id: email,
+                pw: password,
+            },
+        })
+            .then((response) => {
+                Swal.fire({
+                    icon: "success",
+                    title: "와우!",
+                    text: "로그인에 성공했어요!.",
+                    showConfirmButton: false,
+                    timer: 1500,
+                    confirmButtonColor: "#B7DE4B",
+                });
+                if (response === "200") {
+                    //성공했을 시, 메인화면으로 넘어감
+                }
+            }) //서버로부터 받아 온 값을 log에 찍는다.
+            .catch((response) => {
+                console.log(response);
+                Swal.fire({
+                    icon: "error",
+                    title: "이런...",
+                    text: "회원정보가 올바르지 않아요.",
+                    confirmButtonColor: "#B7DE4B",
+                });
+            }); //받아온 과정에서 오류가 발생하면 오류가 발생했다고 알린다.
+    };
+    const onEnterPress = (e) => {
+        if (e.key === "Enter") {
+            onSubmit();
+        }
     };
     return (
         <div className="signInForm_Wrapper">
@@ -19,7 +60,7 @@ function SignInForm() {
                     <div id="form_mainTitle">매일리</div>
                     <div id="form_subTitle">우리들의 일정을 관리하자</div>
                 </div>
-                <table>
+                <table onKeyPress={onEnterPress}>
                     <tbody>
                         <tr>
                             <td>ID</td>
