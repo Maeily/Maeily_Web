@@ -5,6 +5,8 @@ const Swal = require("sweetalert2"); //Swal 라이브러리 가져오기
 const axios = require("axios"); // axios 라이브러리 가져오기
 
 function SignUpForm() {
+    const url = "";
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -19,6 +21,34 @@ function SignUpForm() {
         setPassword(e.target.value);
     };
     const onSubmit = () => {
+        //인증번호 요청이 들어왔을때
+        axios({
+            method: "post",
+            url: url,
+            data: {
+                user_name: name,
+                user_email: email,
+                user_pw: password,
+            },
+        })
+            .then(
+                Swal.fire({
+                    icon: "success",
+                    title: "와우!",
+                    text: "인증번호 보내기 성공!",
+                    showConfirmButton: false,
+                    timer: 1500,
+                    confirmButtonColor: "#B7DE4B",
+                })
+            )
+            .catch(
+                Swal.fire({
+                    icon: "error",
+                    title: "이런...",
+                    text: "서버오류가 났어요...",
+                    confirmButtonColor: "#B7DE4B",
+                })
+            );
         /*
         Swal.fire({
             icon: "success",
