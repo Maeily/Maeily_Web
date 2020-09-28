@@ -1,8 +1,12 @@
 import React from "react";
-import "./App.css";
+import SignInForm from "./components/signIn/SignInForm";
 
 function App() {
-    return <div className="App"></div>;
+    return (
+        <div className="App">
+            <SignInForm></SignInForm>
+        </div>
+    );
 }
 
 export default App;
