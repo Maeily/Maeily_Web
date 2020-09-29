@@ -37,7 +37,7 @@ function LoginForm() {
                     type="id"
                     name=""
                     className="login_id"
-                    placeholder="아이디를 입력해주세요"
+                    placeholder="아이디(대소고 이메일)를 입력해주세요"
                 />
                 <br />
                 <input
@@ -53,6 +53,10 @@ function LoginForm() {
                     className="login_submit"
                     onClick={onSubmit}
                 />
+            </div>
+            <div className="signOn">
+                <div className="signOn_text">회원이 아니신가요?</div>
+                <div className="signOn_link">회원가입</div>
             </div>
         </div>
     );
