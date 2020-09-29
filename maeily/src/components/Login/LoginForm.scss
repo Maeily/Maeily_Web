@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+$main_color: #b7de4b;
+$main_click_color: #84a135;
+.LoginForm_wrapper {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Noto Sans KR", sans-serif;
+    -webkit-user-select: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
+    box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
+}
+/* 전체적인 wrapper */
+.title {
+    &_mainTitle {
+        font-size: 40px;
+        text-align: center;
+        font-weight: bolder;
+        color: $main_color;
+    }
+    &_subTitle {
+        font-weight: bolder;
+        margin-bottom: 40px;
+    }
+}
+
+.login {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    &_id {
+        padding: 10px 0px 10px 0px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+    }
+
+    &_pw {
+        padding: 10px 0px 10px 0px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+    }
+
+    &_submit {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 25px;
+        font-weight: bolder;
+        margin-top: 20px;
+        padding: 5px 0px 5px 0px;
+        border-radius: 3px;
+        width: 100%;
+        background-color: $main_color;
+        border: none;
+        cursor: pointer;
+        color: white;
+        outline: none;
+        transition: ease-in-out 0.1s;
+    }
+    &_submit:hover {
+        transform: scale(0.98);
+    }
+    &_submit:active {
+        background-color: $main_click_color;
+    }
+}
+/*로그인 폼*/
