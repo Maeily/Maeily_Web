@@ -1,31 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LoginForm.scss";
 
 const Swal = require("sweetalert2");
 
-const onSubmit = () => {
-    Swal.fire({
-        title: "성공!",
-        text: "로그인에 성공했습니다",
-        icon: "success",
-        confirmButtonColor: " #b7de4b",
-        timer: 1000,
-        showConfirmButton: false,
-    });
-    //성공 시
-
-    Swal.fire({
-        title: "실패!",
-        text: "로그인에 실패했습니다",
-        icon: "error",
-        confirmButtonColor: " #b7de4b",
-        timer: 1000,
-        showConfirmButton: false,
-    });
-    //실패 시
-};
-
 function LoginForm() {
+    const onSubmit = () => {
+        console.log(email, password);
+        Swal.fire({
+            title: "성공!",
+            text: "로그인에 성공했습니다",
+            icon: "success",
+            confirmButtonColor: " #b7de4b",
+            timer: 1000,
+            showConfirmButton: false,
+        });
+        //성공 시
+        /*
+        Swal.fire({
+            title: "실패!",
+            text: "로그인에 실패했습니다",
+            icon: "error",
+            confirmButtonColor: " #b7de4b",
+            timer: 1000,
+            showConfirmButton: false,
+        });
+        */
+        //실패 시
+    };
+    const onChangeEmail = (e) => {
+        setEmail(e.target.value);
+    };
+    const onChangePassword = (e) => {
+        setPassword(e.target.value);
+    };
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     return (
         <div className="LoginForm_wrapper">
             <div className="title">
@@ -34,17 +43,19 @@ function LoginForm() {
             </div>
             <div className="login">
                 <input
-                    type="id"
-                    name=""
+                    type="email"
                     className="login_id"
                     placeholder="아이디(대소고 이메일)를 입력해주세요"
+                    value={email}
+                    onChange={onChangeEmail}
                 />
                 <br />
                 <input
                     type="password"
-                    name=""
                     className="login_pw"
                     placeholder="비밀번호를 입력해주세요"
+                    value={password}
+                    onChange={onChangePassword}
                 />
                 <br />
                 <input
