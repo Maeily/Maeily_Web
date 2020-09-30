@@ -1,15 +1,11 @@
 import React from "react";
-import LoginFormWrapper from "./components/Login/LoginFormWrapper";
-import LoginForm from "./components/Login/LoginForm.js";
-import "./App.scss";
+import LoginPage from "./pages/LoginPage";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
     return (
         <div className="App">
-            <LoginFormWrapper>
-                <div className="Login_content_box"></div>
-                <LoginForm></LoginForm>
-            </LoginFormWrapper>
+            <LoginPage></LoginPage>
         </div>
     );
 }
