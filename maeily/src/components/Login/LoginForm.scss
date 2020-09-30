@@ -2,9 +2,11 @@
 
 $main_color: #b7de4b;
 $main_click_color: #84a135;
-.LoginForm_wrapper {
-    width: 500px;
-    height: 600px;
+
+.LoginForm {
+    background-color: #f2f2f2;
+    width: 60vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,25 +33,27 @@ $main_click_color: #84a135;
 }
 
 .login {
-    width: 300px;
+    width: 60%;
     display: flex;
     flex-direction: column;
     &_id {
         padding: 10px 0px 10px 0px;
         width: 100%;
         border: none;
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid black;
         outline: none;
         font-family: "Noto Sans KR", sans-serif;
+        background-color: #f2f2f2;
     }
 
     &_pw {
         padding: 10px 0px 10px 0px;
         width: 100%;
         border: none;
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid black;
         outline: none;
         font-family: "Noto Sans KR", sans-serif;
+        background-color: #f2f2f2;
     }
 
     &_submit {

@@ -15,6 +15,7 @@ function LoginForm() {
             showConfirmButton: false,
         });
         //성공 시
+
         /*
         Swal.fire({
             title: "실패!",
@@ -36,7 +37,7 @@ function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     return (
-        <div className="LoginForm_wrapper">
+        <div className="LoginForm">
             <div className="title">
                 <div className="title_mainTitle">매일리</div>
                 <div className="title_subTitle">우리들의 일정을 관리하자</div>
