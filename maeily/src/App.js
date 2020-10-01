@@ -1,11 +1,13 @@
 import React from "react";
+import LoginForm from "./components/Login/LoginForm";
 import LoginPage from "./pages/LoginPage";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import SignOnPage from "./pages/SignOnPage";
+import MainPage from "./pages/MainPage";
 
 function App() {
     return (
         <div className="App">
-            <LoginPage></LoginPage>
+            <MainPage></MainPage>
         </div>
     );
 }
