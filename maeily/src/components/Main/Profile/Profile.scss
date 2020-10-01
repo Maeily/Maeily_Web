@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
 $main_color: #b7de4b;
 
 .profile {
@@ -20,15 +22,18 @@ $main_color: #b7de4b;
         box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
     }
     &_name {
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 40px;
         font-weight: bolder;
     }
     &_grade {
+        font-family: "Noto Sans KR", sans-serif;
         margin-right: 50px;
     }
     &_button {
         margin-top: 130px;
         &_setting {
+            font-family: "Noto Sans KR", sans-serif;
             background-color: $main_color;
             color: white;
             border: none;
@@ -43,6 +48,7 @@ $main_color: #b7de4b;
             box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
         }
         &_logOut {
+            font-family: "Noto Sans KR", sans-serif;
             background-color: $main_color;
             color: white;
             border: none;
