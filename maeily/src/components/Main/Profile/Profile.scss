@@ -4,52 +4,56 @@ $main_color: #b7de4b;
     width: 30%;
     height: 20vh;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     border-radius: 5px;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
     -moz-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
     box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
-    &_picture {
-        margin: 20px 10px 10px 20px;
+    &_img {
+        width: 100px;
+        height: 100px;
+        border-radius: 70%;
+        overflow: hidden;
         -webkit-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
         -moz-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
         box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
-        border-radius: 150px;
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
     }
-    &_info {
-        margin-top: 50px;
-        display: flex;
-        &_name {
-            font-size: 30px;
-            font-weight: bold;
+    &_name {
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    &_grade {
+        margin-right: 50px;
+    }
+    &_button {
+        margin-top: 130px;
+        &_setting {
+            background-color: $main_color;
+            color: white;
+            border: none;
+            font-weight: bolder;
+            border-radius: 5px;
+            outline: none;
+            user-select: none;
             margin-right: 10px;
+            padding: 5px 10px 5px 10px;
+            -webkit-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
+            -moz-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
+            box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
         }
-        &_grade {
-            font-size: 20px;
+        &_logOut {
+            background-color: $main_color;
+            color: white;
+            border: none;
+            font-weight: bolder;
+            border-radius: 5px;
+            outline: none;
+            user-select: none;
+            padding: 5px 10px 5px 10px;
+            -webkit-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
+            -moz-box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
+            box-shadow: 0px 1px 2px 0px rgba(64, 63, 63, 1);
         }
-    }
-    &_logOut {
-        background-color: $main_color;
-        border: none;
-        outline: none;
-        padding: 5px 10px 5px 10px;
-        margin: 0px 10px 0px 10px;
-        border-radius: 5px;
-        font-weight: bold;
-        color: dimgray;
-        cursor: pointer;
-    }
-    &_setting {
-        background-color: $main_color;
-        border: none;
-        outline: none;
-        padding: 5px 10px 5px 10px;
-        margin: 0px 10px 0px 10px;
-        border-radius: 5px;
-        font-weight: bold;
-        color: dimgray;
-        cursor: pointer;
     }
 }
