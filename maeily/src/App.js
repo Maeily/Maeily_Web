@@ -3,7 +3,7 @@ import LoginForm from "./components/Login/LoginForm";
 import LoginPage from "./pages/LoginPage";
 import SignOnPage from "./pages/SignOnPage";
 import MainPage from "./pages/MainPage";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Cafeteria from "./components/Main/Cafeteria/Cafeteria";
 
 function App() {
     return (
