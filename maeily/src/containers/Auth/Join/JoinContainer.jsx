@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Join from "../../../components/Auth/Join/Join";
 import axios from "axios";
+import { SERVER } from "../../../server_url";
 
-export default function JoinContainer({ server }) {
+export default function JoinContainer() {
     const [state, setState] = useState({
         name: "",
         email: "",
@@ -21,7 +22,7 @@ export default function JoinContainer({ server }) {
     const onSubmit = async () => {
         console.log(name, email, password, intro);
         try {
-            const joinInfo = await axios.post(`${server}/register`, {
+            const joinInfo = await axios.post(`${SERVER}/register`, {
                 name: name,
                 email: email,
                 password: password,
