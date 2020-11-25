@@ -1,15 +1,15 @@
 import React from "react";
-import LoginForm from "./components/Login/LoginForm";
-import LoginPage from "./pages/LoginPage";
-import SignOnPage from "./pages/SignOnPage";
-import MainPage from "./pages/MainPage";
-import Cafeteria from "./components/Main/Cafeteria/Cafeteria";
+import LoginContainer from "./containers/Auth/Login/LoginContainer";
+import JoinContainer from "./containers/Auth/Join/JoinContainer";
+
+const SERVER = `http://10.80.163.100:8080`;
 
 function App() {
     return (
-        <div className="App">
-            <MainPage></MainPage>
-        </div>
+        <>
+            <LoginContainer server={SERVER} />
+            <JoinContainer server={SERVER} />
+        </>
     );
 }
 

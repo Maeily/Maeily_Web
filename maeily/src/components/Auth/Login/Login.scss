@@ -1,0 +1,13 @@
+.LoginDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    &_title {
+    }
+    &_form {
+        display: flex;
+        flex-direction: column;
+    }
+}
